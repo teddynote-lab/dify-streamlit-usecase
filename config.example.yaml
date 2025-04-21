@@ -1,0 +1,18 @@
+dify:
+  api_key: YOUR_DIFY_API_KEY
+  base_url: https://api.dify.ai/v1
+info:
+  title: YOUR_APP_TITLE
+  description: YOUR_APP_DESCRIPTION
+  icon: ./assets/teddyflow-logo.svg
+cookie:
+  expiry_days: 30
+  key: dify-streamlit-usecase
+  name: dify-streamlit-usecase
+credentials:
+  usernames:
+oauth2: # 선택사항. 구글 로그인 사용 시 필요.
+  google: # README.md 참고
+    client_id: YOUR_GOOGLE_CLIENT_ID
+    client_secret: YOUR_GOOGLE_CLIENT_SECRET
+    redirect_uri: http://localhost:8501

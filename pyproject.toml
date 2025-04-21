@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "python-dotenv>=1.1.0",
     "requests>=2.32.3",
     "streamlit>=1.44.1",
+    "streamlit-authenticator>=0.4.2",
 ]
