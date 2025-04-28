@@ -1,5 +1,7 @@
 # Dify Streamlit 사용 예제
 
+![preview](./assets/preview.png)  
+
 이 프로젝트는 Dify의 API를 Streamlit과 통합하여 대화형 AI 애플리케이션을 만드는 방법을 보여줍니다.
 
 ## 주요 기능
@@ -38,9 +40,26 @@ cp config.example.yaml config.yaml
 
 2. `config.yaml` 파일을 다음 설정으로 편집:
 
-- Dify API 키
-- 기타 애플리케이션 설정
-- Google OAuth 인증 정보
+```
+dify:
+  api_key: YOUR_DIFY_API_KEY
+  base_url: https://api.dify.ai/v1
+info:
+  title: YOUR_APP_TITLE
+  description: YOUR_APP_DESCRIPTION
+  icon: ./teddynote-logo.png  # 프로젝트의 main.py 에 대한 상대경로 or Remote URL
+cookie:
+  expiry_days: 30
+  key: dify-streamlit-usecase
+  name: dify-streamlit-usecase
+credentials:
+  usernames:
+oauth2: # 선택사항. 구글 로그인 사용 시 필요.
+  google: # README.md 참고
+    client_id: YOUR_GOOGLE_CLIENT_ID
+    client_secret: YOUR_GOOGLE_CLIENT_SECRET
+    redirect_uri: http://localhost:8501
+```
 
 ## 사용 방법
 
@@ -77,14 +96,6 @@ uv run streamlit run main.py
 
 [MIT 라이선스](LICENSE)
 
-## 기여하기
+## Contribute
 
 기여를 환영합니다! Pull Request를 자유롭게 제출해 주세요.
-
-## 문의
-
-질문이나 지원이 필요하시면 Issue 를 남겨주세요.
-
-## 작성자
-
-[Neulhan](https://github.com/Neulhan)

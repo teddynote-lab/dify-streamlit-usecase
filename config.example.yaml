@@ -4,7 +4,7 @@ dify:
 info:
   title: YOUR_APP_TITLE
   description: YOUR_APP_DESCRIPTION
-  icon: ./assets/teddyflow-logo.svg
+  icon: ./teddynote-logo.png
 cookie:
   expiry_days: 30
   key: dify-streamlit-usecase
